@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { toSlug } from '../../utils/slug.js'
 
 const FolderIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -20,9 +22,19 @@ const ExternalLinkIcon = () => (
   </svg>
 )
 
+const ArrowRightIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="5" y1="12" x2="19" y2="12" />
+    <polyline points="12 5 19 12 12 19" />
+  </svg>
+)
+
 function ProjectCard({ project }) {
-  return (
-    <article className="project-card" aria-label={`Project: ${project.name}`}>
+  const hasDetail = Boolean(project.detail)
+  const slug = toSlug(project.name)
+
+  const cardInner = (
+    <>
       <div className="project-card__header">
         <div className="project-card__folder">
           <FolderIcon />
@@ -35,6 +47,7 @@ function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${project.name} GitHub repository`}
+              onClick={(e) => e.stopPropagation()}
             >
               <GithubIcon />
             </a>
@@ -46,6 +59,7 @@ function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${project.name} live demo`}
+              onClick={(e) => e.stopPropagation()}
             >
               <ExternalLinkIcon />
             </a>
@@ -63,6 +77,30 @@ function ProjectCard({ project }) {
           ))}
         </div>
       )}
+
+      {hasDetail && (
+        <div className="project-card__detail-hint">
+          View details <ArrowRightIcon />
+        </div>
+      )}
+    </>
+  )
+
+  if (hasDetail) {
+    return (
+      <Link
+        to={`/project/${slug}`}
+        className="project-card project-card--clickable"
+        aria-label={`View details for ${project.name}`}
+      >
+        {cardInner}
+      </Link>
+    )
+  }
+
+  return (
+    <article className="project-card" aria-label={`Project: ${project.name}`}>
+      {cardInner}
     </article>
   )
 }

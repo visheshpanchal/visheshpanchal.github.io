@@ -83,6 +83,20 @@ export default function Navbar({ config, personal, theme, onToggleTheme }) {
             ))}
           </ul>
 
+          {/* Resume button */}
+          {personal.resumeUrl && (
+            <a
+              href={personal.resumeUrl}
+              className="navbar__resume"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download resume"
+            >
+              Resume
+            </a>
+          )}
+
           {/* Theme toggle */}
           <button
             className="navbar__theme-toggle"

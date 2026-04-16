@@ -350,6 +350,23 @@ button {
   background: rgba(108, 99, 255, 0.1);
 }
 
+.navbar__resume {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+.navbar__resume:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 .navbar__theme-toggle {
   display: flex;
   align-items: center;
@@ -1082,6 +1099,199 @@ button {
   margin-top: 8px;
 }
 
+/* Clickable card (has detail page) */
+.project-card--clickable {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card__detail-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+.project-card--clickable:hover .project-card__detail-hint {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Project Detail Page ────────────────────────────────── */
+.pd-page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.pd-topbar {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 10;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 0;
+}
+
+.pd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+.pd-back:hover {
+  color: var(--color-primary);
+  gap: 12px;
+}
+
+.pd-container {
+  padding-top: 56px;
+  max-width: 800px;
+}
+
+.pd-header {
+  margin-bottom: 64px;
+}
+.pd-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.pd-header__name {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.pd-header__desc {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+.pd-header__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pd-header__links .btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pd-body {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.pd-section__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pd-text {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.pd-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.pd-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.pd-card__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.pd-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  list-style: none;
+}
+.pd-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.pd-feature-icon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 1px;
+}
+
+.pd-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.pd-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.pd-outcome {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(255, 101, 132, 0.08));
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.pd-footer-nav {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.pd-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: var(--color-muted);
+}
+
 /* ═══════════════════════════════════════════════════════════
    EDUCATION
    ═══════════════════════════════════════════════════════════ */
@@ -1395,5 +1605,16 @@ button {
   }
   .project-card {
     padding: 20px;
+  }
+
+  /* Project Detail — mobile */
+  .pd-two-col {
+    grid-template-columns: 1fr;
+  }
+  .pd-features {
+    grid-template-columns: 1fr;
+  }
+  .pd-container {
+    padding-top: 32px;
   }
 }

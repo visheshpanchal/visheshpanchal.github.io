@@ -6,7 +6,7 @@
     "email": "you@example.com",
     "location": "San Francisco, CA",
     "avatar": "./images/avatar.jpg",
-    "resumeUrl": ""
+    "resumeUrl": "./resume.pdf"
   },
   "about": {
     "bio": "I'm a passionate developer with experience building scalable web applications. I love working at the intersection of design and engineering to create beautiful, performant products.",
@@ -69,7 +69,23 @@
       "tags": ["React", "Node.js", "PostgreSQL", "OpenAI"],
       "github": "https://github.com/yourusername/project-alpha",
       "live": "https://project-alpha.vercel.app",
-      "featured": true
+      "featured": true,
+      "detail": {
+        "overview": "Project Alpha is a comprehensive personal finance platform that combines traditional budgeting tools with AI-powered insights. Users can connect their bank accounts, track spending patterns, and receive personalized recommendations to meet their financial goals.",
+        "problem": "Most budgeting apps are either too simple (lacking real insights) or too complex (overwhelming for everyday users). People struggle to understand where their money goes and how to make meaningful changes.",
+        "solution": "Built a clean dashboard that visualizes spending trends, uses OpenAI to generate natural-language summaries and advice, and provides actionable next steps — all without requiring financial expertise from the user.",
+        "features": [
+          "Bank account integration via Plaid API",
+          "AI-generated monthly spending reports",
+          "Smart budget recommendations based on income patterns",
+          "Real-time transaction categorization",
+          "Goal tracking with progress visualization",
+          "Export data to CSV/PDF"
+        ],
+        "challenges": "The hardest part was building the AI prompt pipeline to produce genuinely useful, personalized advice rather than generic financial tips. Required extensive prompt engineering and a feedback loop where users could rate suggestions.",
+        "outcome": "Launched to 200 beta users, achieving a 4.7/5 satisfaction rating. Users reported saving an average of $280/month after using the app for 3 months.",
+        "images": []
+      }
     },
     {
       "name": "Project Beta",
@@ -77,7 +93,23 @@
       "tags": ["Python", "Click", "Docker"],
       "github": "https://github.com/yourusername/project-beta",
       "live": "",
-      "featured": true
+      "featured": true,
+      "detail": {
+        "overview": "Project Beta is a developer productivity CLI that automates common project setup tasks — scaffolding, environment configuration, dependency management, and CI/CD boilerplate — through a single interactive command.",
+        "problem": "Every new project starts with the same 30-minute setup ritual: creating folders, writing config files, setting up Docker, configuring linters. This is pure waste for experienced developers.",
+        "solution": "A Python CLI (built with Click) that reads a simple YAML template and generates the full project scaffold. Templates are versioned, shareable, and composable. Docker-in-Docker support lets you test generated projects immediately.",
+        "features": [
+          "Interactive project scaffolding wizard",
+          "20+ built-in templates (React, FastAPI, Go, etc.)",
+          "Custom template authoring with Jinja2",
+          "One-command Docker environment setup",
+          "Git hooks pre-configuration",
+          "Team template sharing via Git repos"
+        ],
+        "challenges": "Making template composition (combining multiple templates) work without conflicts required building a dependency-resolution system similar to a package manager.",
+        "outcome": "500+ GitHub stars in the first month. Used by 3 startups as their official project bootstrapper.",
+        "images": []
+      }
     },
     {
       "name": "Project Gamma",
