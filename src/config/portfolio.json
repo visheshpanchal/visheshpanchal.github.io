@@ -1,0 +1,99 @@
+{
+  "personal": {
+    "name": "Your Name",
+    "title": "Full Stack Developer",
+    "tagline": "I build things for the web.",
+    "email": "you@example.com",
+    "location": "San Francisco, CA",
+    "avatar": "./images/avatar.jpg",
+    "resumeUrl": ""
+  },
+  "about": {
+    "bio": "I'm a passionate developer with experience building scalable web applications. I love working at the intersection of design and engineering to create beautiful, performant products.",
+    "highlights": [
+      "5+ years of professional experience",
+      "Open source contributor",
+      "Coffee enthusiast"
+    ]
+  },
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "",
+    "website": ""
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
+    },
+    {
+      "category": "Tools",
+      "items": ["Git", "Docker", "AWS", "Figma", "VS Code"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "role": "Senior Frontend Developer",
+      "period": "Jan 2022 – Present",
+      "location": "Remote",
+      "description": "Led development of the company's main SaaS dashboard used by 50k+ users.",
+      "bullets": [
+        "Reduced bundle size by 40% through code splitting and lazy loading",
+        "Built a reusable component library adopted by 3 teams",
+        "Mentored 2 junior developers"
+      ]
+    },
+    {
+      "company": "Startup Inc",
+      "role": "Frontend Developer",
+      "period": "Jun 2019 – Dec 2021",
+      "location": "New York, NY",
+      "description": "Built user-facing features for a fintech application.",
+      "bullets": [
+        "Implemented real-time data dashboards using WebSockets",
+        "Improved Lighthouse performance score from 62 to 95",
+        "Collaborated with design team to build a design system"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Alpha",
+      "description": "A full-stack web application for managing personal finances with AI-powered insights.",
+      "tags": ["React", "Node.js", "PostgreSQL", "OpenAI"],
+      "github": "https://github.com/yourusername/project-alpha",
+      "live": "https://project-alpha.vercel.app",
+      "featured": true
+    },
+    {
+      "name": "Project Beta",
+      "description": "An open-source CLI tool that automates repetitive development tasks.",
+      "tags": ["Python", "Click", "Docker"],
+      "github": "https://github.com/yourusername/project-beta",
+      "live": "",
+      "featured": true
+    },
+    {
+      "name": "Project Gamma",
+      "description": "A mobile-first PWA for tracking workouts with offline support.",
+      "tags": ["React", "Service Workers", "IndexedDB"],
+      "github": "https://github.com/yourusername/project-gamma",
+      "live": "https://project-gamma.netlify.app",
+      "featured": false
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "B.S. Computer Science",
+      "period": "2015 – 2019",
+      "gpa": "3.8 / 4.0"
+    }
+  ]
+}
