@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist -b main --repo https://github.com/visheshpanchal/portfolio.git"
   },
+  
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
