@@ -75,7 +75,6 @@ export default function Hero({ personal, social, config }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DownloadIcon />
               Resume
             </a>
           )}

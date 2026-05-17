@@ -245,6 +245,12 @@ button {
   border: 2px solid transparent;
 }
 
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
   color: #fff;
