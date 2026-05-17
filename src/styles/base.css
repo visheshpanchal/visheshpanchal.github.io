@@ -59,6 +59,17 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ── Reduced Motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
 }
 
 /* ── Custom Scrollbar ──────────────────────────────────── */
@@ -86,6 +97,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* iOS safe area support */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Remove tap highlight on mobile */
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -292,6 +312,9 @@ button {
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-base), box-shadow var(--transition-base);
+  /* iOS safe area for notched phones */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .navbar.scrolled {
@@ -393,9 +416,9 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 36px;
-  height: 36px;
-  padding: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
   border-radius: var(--radius-sm);
   cursor: pointer;
   border: 1px solid var(--color-border);
@@ -466,12 +489,14 @@ button {
    ═══════════════════════════════════════════════════════════ */
 .hero {
   min-height: 100vh;
+  min-height: 100svh; /* iOS Safari: excludes address bar */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: calc(var(--nav-height) + 40px) 24px 80px;
+  padding-bottom: max(80px, env(safe-area-inset-bottom));
   position: relative;
   overflow: hidden;
 }
@@ -1398,7 +1423,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.25rem;
+  font-size: clamp(0.9rem, 3vw, 1.25rem);
   font-weight: 600;
   color: var(--color-text);
   padding: 16px 32px;
@@ -1408,6 +1433,8 @@ button {
   text-decoration: none;
   transition: all var(--transition-base);
   margin-bottom: 48px;
+  word-break: break-all;
+  max-width: 100%;
 }
 .contact__email:hover {
   background: rgba(108, 99, 255, 0.1);
@@ -1477,6 +1504,7 @@ button {
 .footer {
   border-top: 1px solid var(--color-border);
   padding: 32px 24px;
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
   text-align: center;
 }
 
@@ -1505,6 +1533,26 @@ button {
   color: var(--color-secondary);
   display: inline-block;
   animation: pulse 2s ease infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — 1024px tablet breakpoint
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Collapse 3-col about layout to 2-col on tablets */
+  .about__layout--with-photo {
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+  /* Move info cards below on tablet */
+  .about__layout--with-photo > *:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* Project grid: 2 columns on tablet */
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1595,7 +1643,7 @@ button {
 
 @media (max-width: 480px) {
   .hero__name {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
   }
   .container {
     padding: 0 16px;
@@ -1605,6 +1653,30 @@ button {
   }
   .project-card {
     padding: 20px;
+  }
+  .skill-card {
+    padding: 20px;
+  }
+  .about__info-card {
+    padding: 20px;
+  }
+
+  /* Contact email: break long address */
+  .contact__email {
+    padding: 12px 20px;
+    border-radius: var(--radius-lg);
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  /* Social buttons: wrap nicely */
+  .contact__social {
+    gap: 8px;
+  }
+  .contact__social-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
   }
 
   /* Project Detail — mobile */
@@ -1616,5 +1688,8 @@ button {
   }
   .pd-container {
     padding-top: 32px;
+  }
+  .pd-header__name {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
   }
 }
