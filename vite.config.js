@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',  // relative paths for GitHub Pages subdir hosting
+  base: '/portfolio/',
   build: {
     outDir: 'dist',
   },

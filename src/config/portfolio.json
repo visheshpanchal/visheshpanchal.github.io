@@ -1,131 +1,176 @@
 {
   "personal": {
-    "name": "Your Name",
-    "title": "Full Stack Developer",
-    "tagline": "I build things for the web.",
-    "email": "you@example.com",
-    "location": "San Francisco, CA",
+    "name": "Vishesh Panchal",
+    "title": "Software Engineer",
+    "tagline": "I build things that scale — from LLM inference to backend systems.",
+    "email": "visheshpanchal145@gmail.com",
+    "location": "Ahmedabad, India",
     "avatar": "./images/avatar.jpg",
-    "resumeUrl": "./resume.pdf"
+    "resumeUrl": "/portfolio/assets/Vishesh_Panchal_resume.pdf"
   },
   "about": {
-    "bio": "I'm a passionate developer with experience building scalable web applications. I love working at the intersection of design and engineering to create beautiful, performant products.",
+    "bio": "Python Software Engineer with 3+ years of experience spanning LLM inference optimization, distributed GPU systems, and scalable backend engineering. I'm hands-on with deploying and benchmarking large language models on multi-node GPU clusters, and equally comfortable building production-grade backend systems and integrating GenAI tooling.",
     "highlights": [
-      "5+ years of professional experience",
-      "Open source contributor",
-      "Coffee enthusiast"
+      "3+ years of professional experience",
+      "LLM inference & distributed GPU systems specialist",
+      "Open source problem solver — 200+ LeetCode problems"
     ]
   },
   "social": {
-    "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourusername",
+    "github": "https://github.com/visheshpanchal",
+    "linkedin": "https://linkedin.com/in/visheshpanchal",
     "twitter": "",
-    "website": ""
+    "website": "https://leetcode.com/u/visheshpanchal"
   },
   "skills": [
     {
-      "category": "Frontend",
-      "items": ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS"]
+      "category": "AI / ML",
+      "items": ["vLLM", "LangChain", "LiteLLM", "RAG", "FAISS", "Qdrant", "HuggingFace Transformers", "OpenAI API", "Gemini API"]
     },
     {
       "category": "Backend",
-      "items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
+      "items": ["Python", "FastAPI", "Flask", "Django", "Celery", "Redis", "PostgreSQL", "MongoDB", "REST APIs"]
     },
     {
-      "category": "Tools",
-      "items": ["Git", "Docker", "AWS", "Figma", "VS Code"]
+      "category": "Infrastructure & Tools",
+      "items": ["AWS (EC2, S3, Lambda, RDS)", "Docker", "SLURM", "Ray", "Git", "SQL", "JavaScript", "C++", "Java"]
     }
   ],
   "experience": [
     {
-      "company": "Acme Corp",
-      "role": "Senior Frontend Developer",
-      "period": "Jan 2022 – Present",
-      "location": "Remote",
-      "description": "Led development of the company's main SaaS dashboard used by 50k+ users.",
+      "company": "Expedera India Pvt Ltd.",
+      "role": "Software Engineer",
+      "period": "Feb 2026 – May 2026",
+      "location": "Hyderabad, India",
+      "description": "Developed and optimized LLM inference workloads on a production-grade framework built on vLLM across multi-node GPU clusters.",
       "bullets": [
-        "Reduced bundle size by 40% through code splitting and lazy loading",
-        "Built a reusable component library adopted by 3 teams",
-        "Mentored 2 junior developers"
+        "Implemented and evaluated Pipeline, Data, and Expert Parallelism strategies on H200 ×8, A100 ×4, and RTX 4090 ×4 multi-node GPU clusters connected via Ray",
+        "Built an orchestration framework to benchmark LLM engine configurations covering parallelism strategies, KV-caching, dynamic batching, and CUDA graph optimizations",
+        "Monitored and analyzed TTFT and TPOT metrics to evaluate model serving efficiency across different hardware and configuration setups",
+        "Deployed and managed Ray clusters with SLURM architecture for scheduling and distributing inference tasks"
       ]
     },
     {
-      "company": "Startup Inc",
-      "role": "Frontend Developer",
-      "period": "Jun 2019 – Dec 2021",
-      "location": "New York, NY",
-      "description": "Built user-facing features for a fintech application.",
+      "company": "Albiorix Technology",
+      "role": "Python Software Engineer",
+      "period": "Jun 2025 – Oct 2025",
+      "location": "Ahmedabad, India",
+      "description": "Built authentication systems and real-time backend applications using AWS and Azure services.",
       "bullets": [
-        "Implemented real-time data dashboards using WebSockets",
-        "Improved Lighthouse performance score from 62 to 95",
-        "Collaborated with design team to build a design system"
+        "Built an Auth0-based authentication and Data Connector system integrating HubSpot and Xero via AWS and Azure, significantly reducing integration setup time",
+        "Developed the backend for Fantix, a real-time sports betting app using FastAPI, APScheduler, and AWS — supporting live odds streaming, per-match user chat, and a coin-based reward system"
+      ]
+    },
+    {
+      "company": "Dolcera Pvt. Ltd.",
+      "role": "Software Engineer",
+      "period": "Apr 2023 – May 2025",
+      "location": "Hyderabad, Telangana",
+      "description": "Built and deployed the backend for an AI-driven patent drafting platform used at scale.",
+      "bullets": [
+        "Developed and deployed the IPAuthor OfficeAction platform using Python, Flask, and AWS (EC2, S3, Lambda, RDS)",
+        "Integrated LiteLLM and RAG with Qdrant vector store to improve AI-driven query accuracy for patent document analysis",
+        "Implemented Celery task queues with Redis for asynchronous execution of multi-step AI workflows, improving system throughput",
+        "Designed and documented RESTful APIs, reducing onboarding time for new developers"
+      ]
+    },
+    {
+      "company": "CreArt Solutions",
+      "role": "Django Developer Intern",
+      "period": "Dec 2021 – Jun 2022",
+      "location": "Hyderabad, Telangana",
+      "description": "Built DevSpace, a full-stack idea-sharing platform where users post concepts and businesses can browse and purchase them.",
+      "bullets": [
+        "Implemented user authentication, an admin dashboard, and a feedback system using Django and PostgreSQL"
       ]
     }
   ],
   "projects": [
+{
+    "name": "Note Taker – Cross-Platform Desktop Note-Taking App",
+    "description": "A feature-rich desktop note-taking app built with React, Vite, and Electron, supporting rich text notes, todos with timers, day plans, and freehand diagrams — stored entirely on-device.",
+    "tags": ["React", "Electron", "Vite", "TipTap", "Excalidraw", "JavaScript"],
+    "github": "https://github.com/visheshpanchal/note-taker",
+    "live": "",
+    "featured": true,
+    "detail": {
+      "overview": "Note Taker is a cross-platform desktop app that unifies four note types — rich text notes, todo lists with countdown timers, structured day plans, and freehand diagrams — in a single local-first application built on Electron and React.",
+      "problem": "Most note-taking tools are cloud-dependent, fragmented across multiple apps, or lack the flexibility to handle different types of structured content (free text, tasks, daily planning, and visual diagrams) in one place.",
+      "solution": "Built a fully local Electron app where all data is stored as a JSON file on the user's machine via IPC, with a rich React UI featuring a TipTap-powered editor, Excalidraw for diagrams, and a slash command menu for fast content insertion.",
+      "features": [
+        "Four note types: rich text Notes, Todos with per-item countdown timers, Day Plans with template sections, and Excalidraw-powered Diagrams",
+        "TipTap rich text editor with headings, tables, images, code blocks, task lists, and a slash command menu",
+        "Notebook, tag, category, color label, and favorites organization with sidebar filters",
+        "Six built-in themes (Default Light/Dark, Midnight, Sepia, Nord, Forest) with system preference sync",
+        "Fuzzy quick-open palette (⌘K), desktop reminders via Electron, and export to Markdown or HTML",
+        "Configurable local JSON storage with auto-save (800 ms debounce) and storage migration from Settings"
+      ],
+      "challenges": "Integrating Excalidraw and TipTap within Electron's renderer process while keeping auto-save performant, and wiring Electron IPC for file I/O and native desktop notifications without blocking the UI thread.",
+      "outcome": "A fully offline, privacy-first desktop note app that ships as a native binary for macOS, Windows, and Linux via electron-builder.",
+      "images": []
+    }
+  },
     {
-      "name": "Project Alpha",
-      "description": "A full-stack web application for managing personal finances with AI-powered insights.",
-      "tags": ["React", "Node.js", "PostgreSQL", "OpenAI"],
-      "github": "https://github.com/yourusername/project-alpha",
-      "live": "https://project-alpha.vercel.app",
-      "featured": true,
-      "detail": {
-        "overview": "Project Alpha is a comprehensive personal finance platform that combines traditional budgeting tools with AI-powered insights. Users can connect their bank accounts, track spending patterns, and receive personalized recommendations to meet their financial goals.",
-        "problem": "Most budgeting apps are either too simple (lacking real insights) or too complex (overwhelming for everyday users). People struggle to understand where their money goes and how to make meaningful changes.",
-        "solution": "Built a clean dashboard that visualizes spending trends, uses OpenAI to generate natural-language summaries and advice, and provides actionable next steps — all without requiring financial expertise from the user.",
-        "features": [
-          "Bank account integration via Plaid API",
-          "AI-generated monthly spending reports",
-          "Smart budget recommendations based on income patterns",
-          "Real-time transaction categorization",
-          "Goal tracking with progress visualization",
-          "Export data to CSV/PDF"
-        ],
-        "challenges": "The hardest part was building the AI prompt pipeline to produce genuinely useful, personalized advice rather than generic financial tips. Required extensive prompt engineering and a feedback loop where users could rate suggestions.",
-        "outcome": "Launched to 200 beta users, achieving a 4.7/5 satisfaction rating. Users reported saving an average of $280/month after using the app for 3 months.",
-        "images": []
-      }
-    },
-    {
-      "name": "Project Beta",
-      "description": "An open-source CLI tool that automates repetitive development tasks.",
-      "tags": ["Python", "Click", "Docker"],
-      "github": "https://github.com/yourusername/project-beta",
+      "name": "Orchestrator – LLM Inference Benchmarking Framework",
+      "description": "An internal orchestration framework to benchmark a custom vLLM-based inference engine across parallelism strategies and GPU configurations.",
+      "tags": ["Python", "vLLM", "Ray", "SLURM", "Docker", "CUDA"],
+      "github": "",
       "live": "",
       "featured": true,
       "detail": {
-        "overview": "Project Beta is a developer productivity CLI that automates common project setup tasks — scaffolding, environment configuration, dependency management, and CI/CD boilerplate — through a single interactive command.",
-        "problem": "Every new project starts with the same 30-minute setup ritual: creating folders, writing config files, setting up Docker, configuring linters. This is pure waste for experienced developers.",
-        "solution": "A Python CLI (built with Click) that reads a simple YAML template and generates the full project scaffold. Templates are versioned, shareable, and composable. Docker-in-Docker support lets you test generated projects immediately.",
+        "overview": "Orchestrator is a benchmarking and testing framework built to evaluate tLLM (a custom vLLM-based inference engine) across a wide range of configurations on multi-node GPU clusters including H200 ×8, A100 ×4, and RTX 4090 ×4.",
+        "problem": "Evaluating LLM serving performance across different parallelism strategies, hardware setups, and optimization techniques (KV-caching, dynamic batching, CUDA graphs) was a manual, time-consuming, and error-prone process.",
+        "solution": "Built a framework that automates benchmark runs across configurations, uses Docker containers with GPU slicing for parallel test execution on a single machine, and manages process scheduling via SLURM.",
         "features": [
-          "Interactive project scaffolding wizard",
-          "20+ built-in templates (React, FastAPI, Go, etc.)",
-          "Custom template authoring with Jinja2",
-          "One-command Docker environment setup",
-          "Git hooks pre-configuration",
-          "Team template sharing via Git repos"
+          "Supports Pipeline, Data, and Expert Parallelism configurations",
+          "Benchmarks KV-caching, dynamic batching, and CUDA graph optimizations",
+          "Parallel test execution via Docker GPU slicing",
+          "Process allocation and scheduling managed with SLURM",
+          "Runs across H200, A100, and RTX 4090 multi-node clusters"
         ],
-        "challenges": "Making template composition (combining multiple templates) work without conflicts required building a dependency-resolution system similar to a package manager.",
-        "outcome": "500+ GitHub stars in the first month. Used by 3 startups as their official project bootstrapper.",
+        "challenges": "Coordinating parallel benchmark runs across heterogeneous GPU hardware while isolating test configurations cleanly required careful orchestration of Docker containers and SLURM job scheduling.",
+        "outcome": "Enabled rapid, reproducible evaluation of LLM engine configurations in a production-grade environment, directly informing infrastructure decisions.",
         "images": []
       }
     },
     {
-      "name": "Project Gamma",
-      "description": "A mobile-first PWA for tracking workouts with offline support.",
-      "tags": ["React", "Service Workers", "IndexedDB"],
-      "github": "https://github.com/yourusername/project-gamma",
-      "live": "https://project-gamma.netlify.app",
+      "name": "IPAuthor – OfficeAction Patent Drafting Platform",
+      "description": "An end-to-end AI patent drafting tool using LiteLLM, OpenAI fine-tuning, Gemini, and RAG, deployed on AWS.",
+      "tags": ["Python", "Flask", "LiteLLM", "RAG", "OpenAI", "AWS"],
+      "github": "",
+      "live": "",
+      "featured": true,
+      "detail": {
+        "overview": "IPAuthor is an AI-powered platform that automates the drafting of patent OfficeAction responses, combining LLM fine-tuning, retrieval-augmented generation, and a production-grade cloud backend.",
+        "problem": "Drafting patent OfficeAction responses is a highly specialized, time-consuming process that typically requires significant attorney involvement, making it expensive and slow.",
+        "solution": "Built a full-stack AI platform with a Flask API backend, integrating LiteLLM and RAG (FAISS/Qdrant) to retrieve relevant prior art and case context, generate accurate drafts, and allow iterative refinement.",
+        "features": [
+          "LiteLLM integration with OpenAI fine-tuning and Gemini API",
+          "RAG pipeline using FAISS and Qdrant vector stores",
+          "Asynchronous task execution with Celery and Redis",
+          "Deployed on AWS (EC2, RDS, Lambda, S3)",
+          "RESTful API with full documentation"
+        ],
+        "challenges": "Getting the RAG pipeline to surface truly relevant patent documents — not just keyword matches — required careful chunking strategies, embedding model selection, and prompt engineering.",
+        "outcome": "Deployed to production, handling patent drafting workflows at scale for Dolcera's clients.",
+        "images": []
+      }
+    },
+    {
+      "name": "Fantix Sports – Real-Time Betting Application",
+      "description": "A real-time sports betting backend with live odds streaming, match-scoped user chat, and a coin-based reward system.",
+      "tags": ["Python", "FastAPI", "AWS", "APScheduler", "WebSockets"],
+      "github": "",
+      "live": "",
       "featured": false
     }
   ],
   "education": [
     {
-      "institution": "University of Technology",
-      "degree": "B.S. Computer Science",
-      "period": "2015 – 2019",
-      "gpa": "3.8 / 4.0"
+      "institution": "LJ University",
+      "degree": "Bachelor of Engineering – Computer Science",
+      "period": "Aug 2018 – Jun 2022",
+      "gpa": "7.76 / 10"
     }
   ]
 }

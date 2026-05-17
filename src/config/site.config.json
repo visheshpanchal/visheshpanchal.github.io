@@ -28,7 +28,7 @@
     }
   },
   "nav": {
-    "logo": "YN",
+    "logo": "",
     "sticky": true,
     "links": [
       { "label": "About", "href": "#about", "enabled": true },
