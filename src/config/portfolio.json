@@ -6,7 +6,7 @@
     "email": "visheshpanchal145@gmail.com",
     "location": "Ahmedabad, India",
     "avatar": "./images/avatar.jpg",
-    "resumeUrl": "/portfolio/assets/Vishesh_Panchal_resume.pdf"
+    "resumeUrl": "/assets/Vishesh_Panchal_resume.pdf"
   },
   "about": {
     "bio": "Python Software Engineer with 3+ years of experience spanning LLM inference optimization, distributed GPU systems, and scalable backend engineering. I'm hands-on with deploying and benchmarking large language models on multi-node GPU clusters, and equally comfortable building production-grade backend systems and integrating GenAI tooling.",
