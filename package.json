@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist -b main --repo https://github.com/visheshpanchal/portfolio.git"
+    "deploy": "npm run build && gh-pages -d dist -b main --repo https://github.com/visheshpanchal/visheshpanchal.github.io.git"
   },
   
   "dependencies": {
