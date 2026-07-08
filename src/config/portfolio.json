@@ -25,15 +25,45 @@
   "skills": [
     {
       "category": "AI / ML",
-      "items": ["vLLM", "LangChain", "LiteLLM", "RAG", "FAISS", "Qdrant", "HuggingFace Transformers", "OpenAI API", "Gemini API"]
+      "items": [
+        "vLLM",
+        "LangChain",
+        "LiteLLM",
+        "RAG",
+        "FAISS",
+        "Qdrant",
+        "HuggingFace Transformers",
+        "OpenAI API",
+        "Gemini API"
+      ]
     },
     {
       "category": "Backend",
-      "items": ["Python", "FastAPI", "Flask", "Django", "Celery", "Redis", "PostgreSQL", "MongoDB", "REST APIs"]
+      "items": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "Django",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "MongoDB",
+        "REST APIs"
+      ]
     },
     {
       "category": "Infrastructure & Tools",
-      "items": ["AWS (EC2, S3, Lambda, RDS)", "Docker", "SLURM", "Ray", "Git", "SQL", "JavaScript", "C++", "Java"]
+      "items": [
+        "AWS (EC2, S3, Lambda, RDS)",
+        "Docker",
+        "SLURM",
+        "Ray",
+        "Git",
+        "SQL",
+        "JavaScript",
+        "C++",
+        "Java"
+      ]
     }
   ],
   "experience": [
@@ -86,30 +116,37 @@
     }
   ],
   "projects": [
-{
-    "name": "Note Taker – Cross-Platform Desktop Note-Taking App",
-    "description": "A feature-rich desktop note-taking app built with React, Vite, and Electron, supporting rich text notes, todos with timers, day plans, and freehand diagrams — stored entirely on-device.",
-    "tags": ["React", "Electron", "Vite", "TipTap", "Excalidraw", "JavaScript"],
-    "github": "https://github.com/visheshpanchal/note-taker",
-    "live": "",
-    "featured": true,
-    "detail": {
-      "overview": "Note Taker is a cross-platform desktop app that unifies four note types — rich text notes, todo lists with countdown timers, structured day plans, and freehand diagrams — in a single local-first application built on Electron and React.",
-      "problem": "Most note-taking tools are cloud-dependent, fragmented across multiple apps, or lack the flexibility to handle different types of structured content (free text, tasks, daily planning, and visual diagrams) in one place.",
-      "solution": "Built a fully local Electron app where all data is stored as a JSON file on the user's machine via IPC, with a rich React UI featuring a TipTap-powered editor, Excalidraw for diagrams, and a slash command menu for fast content insertion.",
-      "features": [
-        "Four note types: rich text Notes, Todos with per-item countdown timers, Day Plans with template sections, and Excalidraw-powered Diagrams",
-        "TipTap rich text editor with headings, tables, images, code blocks, task lists, and a slash command menu",
-        "Notebook, tag, category, color label, and favorites organization with sidebar filters",
-        "Six built-in themes (Default Light/Dark, Midnight, Sepia, Nord, Forest) with system preference sync",
-        "Fuzzy quick-open palette (⌘K), desktop reminders via Electron, and export to Markdown or HTML",
-        "Configurable local JSON storage with auto-save (800 ms debounce) and storage migration from Settings"
+    {
+      "name": "Note Taker – Cross-Platform Desktop Note-Taking App",
+      "description": "A feature-rich desktop note-taking app built with React, Vite, and Electron, supporting rich text notes, todos with timers, day plans, and freehand diagrams — stored entirely on-device.",
+      "tags": [
+        "React",
+        "Electron",
+        "Vite",
+        "TipTap",
+        "Excalidraw",
+        "JavaScript"
       ],
-      "challenges": "Integrating Excalidraw and TipTap within Electron's renderer process while keeping auto-save performant, and wiring Electron IPC for file I/O and native desktop notifications without blocking the UI thread.",
-      "outcome": "A fully offline, privacy-first desktop note app that ships as a native binary for macOS, Windows, and Linux via electron-builder.",
-      "images": []
-    }
-  },
+      "github": "https://github.com/visheshpanchal/note-taker",
+      "live": "",
+      "featured": true,
+      "detail": {
+        "overview": "Note Taker is a cross-platform desktop app that unifies four note types — rich text notes, todo lists with countdown timers, structured day plans, and freehand diagrams — in a single local-first application built on Electron and React.",
+        "problem": "Most note-taking tools are cloud-dependent, fragmented across multiple apps, or lack the flexibility to handle different types of structured content (free text, tasks, daily planning, and visual diagrams) in one place.",
+        "solution": "Built a fully local Electron app where all data is stored as a JSON file on the user's machine via IPC, with a rich React UI featuring a TipTap-powered editor, Excalidraw for diagrams, and a slash command menu for fast content insertion.",
+        "features": [
+          "Four note types: rich text Notes, Todos with per-item countdown timers, Day Plans with template sections, and Excalidraw-powered Diagrams",
+          "TipTap rich text editor with headings, tables, images, code blocks, task lists, and a slash command menu",
+          "Notebook, tag, category, color label, and favorites organization with sidebar filters",
+          "Six built-in themes (Default Light/Dark, Midnight, Sepia, Nord, Forest) with system preference sync",
+          "Fuzzy quick-open palette (⌘K), desktop reminders via Electron, and export to Markdown or HTML",
+          "Configurable local JSON storage with auto-save (800 ms debounce) and storage migration from Settings"
+        ],
+        "challenges": "Integrating Excalidraw and TipTap within Electron's renderer process while keeping auto-save performant, and wiring Electron IPC for file I/O and native desktop notifications without blocking the UI thread.",
+        "outcome": "A fully offline, privacy-first desktop note app that ships as a native binary for macOS, Windows, and Linux via electron-builder.",
+        "images": []
+      }
+    },
     {
       "name": "Orchestrator – LLM Inference Benchmarking Framework",
       "description": "An internal orchestration framework to benchmark a custom vLLM-based inference engine across parallelism strategies and GPU configurations.",
@@ -163,6 +200,38 @@
       "github": "",
       "live": "",
       "featured": false
+    },
+    {
+      "name": "feedsmanager – Terminal RSS/Atom Feed Reader",
+      "description": "A cross-platform TUI RSS/Atom feed reader with multi-user accounts, admin-managed feeds, and a background refresh daemon, built with Textual.",
+      "tags": [
+        "Python",
+        "Textual",
+        "feedparser",
+        "PBKDF2",
+        "SQLite/JSON",
+        "CLI"
+      ],
+      "github": "https://github.com/visheshpanchal/feedsmanager",
+      "live": "https://pypi.org/project/feedsmanager/",
+      "featured": true,
+      "detail": {
+        "overview": "feedsmanager is a terminal-based RSS/Atom feed reader that lets users add feeds, browse posts, and track read/unread status per account, with an optional detached background process that keeps feeds refreshing after the app is closed.",
+        "problem": "Existing terminal feed readers typically lack multi-user support, role-based feed management, and a way to keep feeds updating in the background without leaving the TUI open, making them impractical for shared or always-on setups.",
+        "solution": "Built a Textual-based TUI with local user accounts and PBKDF2 password hashing, a role-gated Admin Panel for feed CRUD and JSON export/import, per-user categories and read/unread tracking keyed by stable UUIDs, and a separate detached background runner controllable via CLI (start/stop/pause/resume/status).",
+        "features": [
+          "Add/Edit/Remove feeds restricted to admin accounts via a dedicated Admin Panel with an audit log",
+          "Parses RSS and Atom feeds via feedparser, with manual and configurable auto-refresh",
+          "Detached background runner that keeps refreshing feeds after the app is closed, managed via CLI (start/stop/pause/resume/status)",
+          "Local accounts with signup/login and per-user read/unread tracking keyed by stable feed and post UUIDs",
+          "Personal, private categories to group feeds into folders on the dashboard",
+          "Admin export/import of feeds and posts as a single JSON file, with duplicate detection by URL",
+          "OS-standard storage paths (Windows/macOS/Linux) with live migration when changed from Settings"
+        ],
+        "challenges": "Designing a background process that survives the TUI closing while staying safely coordinated with the main app's own auto-refresh timer required a control-file-based command inbox and careful process/state management, since the runner is a plain detached process rather than an OS-registered service.",
+        "outcome": "Delivered a fully offline-capable, multi-user feed reader with clear admin/regular role separation, a documented storage format, and a unit-tested core (models, config, storage, feed_parser, users, audit, background control logic) isolated from the untested Textual UI layer.",
+        "images": []
+      }
     }
   ],
   "education": [
