@@ -117,33 +117,39 @@
   ],
   "projects": [
     {
-      "name": "Note Taker – Cross-Platform Desktop Note-Taking App",
-      "description": "A feature-rich desktop note-taking app built with React, Vite, and Electron, supporting rich text notes, todos with timers, day plans, and freehand diagrams — stored entirely on-device.",
+      "name": "MiniRAG – Experimental RAG Chat Playground",
+      "description": "An experimental retrieval-augmented generation (RAG) chat playground built as a monorepo, combining a FastAPI + LangGraph backend, a Celery-based ingestion pipeline, and a React/Tauri desktop-capable frontend.",
       "tags": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "Celery",
         "React",
-        "Electron",
+        "TypeScript",
         "Vite",
-        "TipTap",
-        "Excalidraw",
-        "JavaScript"
+        "Tauri",
+        "Qdrant",
+        "PostgreSQL",
+        "Redis",
+        "Docker"
       ],
-      "github": "https://github.com/visheshpanchal/note-taker",
+      "github": "https://github.com/visheshpanchal/minirag",
       "live": "",
       "featured": true,
       "detail": {
-        "overview": "Note Taker is a cross-platform desktop app that unifies four note types — rich text notes, todo lists with countdown timers, structured day plans, and freehand diagrams — in a single local-first application built on Electron and React.",
-        "problem": "Most note-taking tools are cloud-dependent, fragmented across multiple apps, or lack the flexibility to handle different types of structured content (free text, tasks, daily planning, and visual diagrams) in one place.",
-        "solution": "Built a fully local Electron app where all data is stored as a JSON file on the user's machine via IPC, with a rich React UI featuring a TipTap-powered editor, Excalidraw for diagrams, and a slash command menu for fast content insertion.",
+        "overview": "MiniRAG is a personal practice project for exploring retrieval-augmented generation pipelines, LangGraph-based agents, and a Tauri desktop shell wrapped around a web frontend, structured as a full monorepo spanning backend, worker, and frontend services.",
+        "problem": "Building and understanding a complete RAG system end-to-end - document ingestion, chunking/embedding, vector storage, agent orchestration, and a usable chat UI - requires stitching together many moving parts that are usually explored in isolation or via black-box tools.",
+        "solution": "Designed a modular monorepo with a FastAPI backend exposing a LangGraph agent (via a per-chat POST /agent/{ragId} endpoint), a Celery worker handling asynchronous document ingestion, and dedicated libraries separating concerns: document parsing, chat/project/blob storage management, the extract-clean-chunk-embed-store pipeline, and a swappable vector DB abstraction currently backed by Qdrant. The frontend is a React 19 + TypeScript + Vite app that runs either in the browser or as a native desktop app via a Tauri (Rust) shell.",
         "features": [
-          "Four note types: rich text Notes, Todos with per-item countdown timers, Day Plans with template sections, and Excalidraw-powered Diagrams",
-          "TipTap rich text editor with headings, tables, images, code blocks, task lists, and a slash command menu",
-          "Notebook, tag, category, color label, and favorites organization with sidebar filters",
-          "Six built-in themes (Default Light/Dark, Midnight, Sepia, Nord, Forest) with system preference sync",
-          "Fuzzy quick-open palette (⌘K), desktop reminders via Electron, and export to Markdown or HTML",
-          "Configurable local JSON storage with auto-save (800 ms debounce) and storage migration from Settings"
+          "FastAPI backend with a LangGraph-based conversational agent wired per chat session",
+          "Celery worker for asynchronous, non-blocking document ingestion",
+          "Modular libraries: minirag_doc (parsing), minirag_management (chat/project/blob storage), minirag_pipeline (extract → clean → chunk → embed → store), and minirag_vectordb (pluggable vector DB abstraction, currently Qdrant)",
+          "React 19 + TypeScript + Vite frontend, runnable in-browser or as a native Tauri 2 desktop app",
+          "Full local dev stack via Docker Compose: Postgres, Redis, MinIO, Qdrant, server, worker, and web in one command",
+          "Alembic database migrations and a documented extension path for adding new LangGraph agent types"
         ],
-        "challenges": "Integrating Excalidraw and TipTap within Electron's renderer process while keeping auto-save performant, and wiring Electron IPC for file I/O and native desktop notifications without blocking the UI thread.",
-        "outcome": "A fully offline, privacy-first desktop note app that ships as a native binary for macOS, Windows, and Linux via electron-builder.",
+        "challenges": "Coordinating a multi-service architecture (API server, async worker, vector DB, object storage, and a dual browser/desktop frontend) behind a single coherent developer experience, while keeping the RAG pipeline (extract, clean, chunk, embed, store) cleanly decoupled from the agent orchestration layer so new agent types can be added without reworking storage or retrieval.",
+        "outcome": "A working, testable RAG playground with backend pytest coverage plus frontend unit and e2e tests, all running in CI on every push and pull request — a foundation explicitly designed for experimenting with new agent types and orchestration patterns rather than production use.",
         "images": []
       }
     },
